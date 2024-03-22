@@ -4,7 +4,7 @@ class HelloWorld {
     static Integer value = (int) System.currentTimeMillis() % 1000
     static void main(String... args){
         String greeting = "Hello World!"
-        var message = "${greeting} value=${value}"
+        def message = "${greeting} value=${value}"
         Class<?> messageClass = message.getClass()
         println(message)
         println("messageClas=${messageClass}")
