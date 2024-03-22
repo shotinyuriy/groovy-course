@@ -4,5 +4,7 @@
 .project
 tmp
 */**/.settings
+bin
 */**/bin
+out
 */**/out

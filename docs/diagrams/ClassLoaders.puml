@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+object "BootStrap ClassLoader" as BSCL {
+(JDK)
+}
+object "Platform ClassLoader" as PCL
+object "App ClassLoader" as ACL {
+(System)
+}
+object "Root ClassLoader" as RCL {
+(Groovy)
+}
+object "Groovy ClassLoader" as GCL {
+(Groovy)
+extends URLClassLoader
+}
+
+PCL -u-> BSCL
+ACL -u-> PCL
+RCL -u-> ACL
+GCL -u-> RCL
+@enduml
